@@ -14,7 +14,6 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ vars.AWS_ROLE }}
-          aws-account-id: ${{ vars.ACCOUNT_ID }}
           aws-region: 'us-east-1'
       - name: copy to S3
         run: aws s3 sync ./. s3://github-code-repo/copy_repo_s3/
