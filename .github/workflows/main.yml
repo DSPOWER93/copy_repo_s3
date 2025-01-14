@@ -11,7 +11,7 @@ jobs:
       - name: List Files after
         run: ls -a
       - name: show credentials
-      	run: echo ${{ vars.AWS_ROLE }}
+        run: echo ${{ vars.AWS_ROLE }}
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
         with:
